@@ -21,10 +21,10 @@ namespace fxBarcodeScanner
     #nowarn "51" // address-of operator can occur in the code
     #nowarn "1183" // unused 'this' reference
     
-    exception ReturnException322b9692d470446ebd6868e4ca22b13f of obj
-    exception ReturnNoneException322b9692d470446ebd6868e4ca22b13f
+    exception ReturnExceptionc807fb0c170d46ca993d81e6d25d6903 of obj
+    exception ReturnNoneExceptionc807fb0c170d46ca993d81e6d25d6903
     [<AutoOpen>]
-    module FuncConvertFinalOverload322b9692d470446ebd6868e4ca22b13f =
+    module FuncConvertFinalOverloadc807fb0c170d46ca993d81e6d25d6903 =
       // This extension member adds to the FuncConvert type and is the last resort member in the method overloading rules. 
       type global.Microsoft.FSharp.Core.FuncConvert with
           /// A utility function to convert function values from tupled to curried form
@@ -45,6 +45,93 @@ namespace fxBarcodeScanner
         
         (* partial *)Resource_Attribute () =
             static do Android.Runtime.ResourceIdManager.UpdateIdValues()
+            // aapt resource value: 0x7f010003
+            static member buttonSize = 2130771971
+            
+            // aapt resource value: 0x7f010002
+            static member circleCrop = 2130771970
+            
+            // aapt resource value: 0x7f010004
+            static member colorScheme = 2130771972
+            
+            // aapt resource value: 0x7f010001
+            static member imageAspectRatio = 2130771969
+            
+            // aapt resource value: 0x7f010000
+            static member imageAspectRatioAdjust = 2130771968
+            
+            // aapt resource value: 0x7f010005
+            static member scopeUris = 2130771973
+            (* Member of type 'CodeTypeConstructor' is not supported by the CodeDOM provider and was omitted *)
+
+
+    
+    and
+        
+        (* partial *)Resource_Color () =
+            static do Android.Runtime.ResourceIdManager.UpdateIdValues()
+            // aapt resource value: 0x7f060008
+            static member common_action_bar_splitter = 2131099656
+            
+            // aapt resource value: 0x7f060011
+            static member common_google_signin_btn_text_dark = 2131099665
+            
+            // aapt resource value: 0x7f060009
+            static member common_google_signin_btn_text_dark_default = 2131099657
+            
+            // aapt resource value: 0x7f06000b
+            static member common_google_signin_btn_text_dark_disabled = 2131099659
+            
+            // aapt resource value: 0x7f06000c
+            static member common_google_signin_btn_text_dark_focused = 2131099660
+            
+            // aapt resource value: 0x7f06000a
+            static member common_google_signin_btn_text_dark_pressed = 2131099658
+            
+            // aapt resource value: 0x7f060012
+            static member common_google_signin_btn_text_light = 2131099666
+            
+            // aapt resource value: 0x7f06000d
+            static member common_google_signin_btn_text_light_default = 2131099661
+            
+            // aapt resource value: 0x7f06000f
+            static member common_google_signin_btn_text_light_disabled = 2131099663
+            
+            // aapt resource value: 0x7f060010
+            static member common_google_signin_btn_text_light_focused = 2131099664
+            
+            // aapt resource value: 0x7f06000e
+            static member common_google_signin_btn_text_light_pressed = 2131099662
+            
+            // aapt resource value: 0x7f060013
+            static member common_plus_signin_btn_text_dark = 2131099667
+            
+            // aapt resource value: 0x7f060000
+            static member common_plus_signin_btn_text_dark_default = 2131099648
+            
+            // aapt resource value: 0x7f060002
+            static member common_plus_signin_btn_text_dark_disabled = 2131099650
+            
+            // aapt resource value: 0x7f060003
+            static member common_plus_signin_btn_text_dark_focused = 2131099651
+            
+            // aapt resource value: 0x7f060001
+            static member common_plus_signin_btn_text_dark_pressed = 2131099649
+            
+            // aapt resource value: 0x7f060014
+            static member common_plus_signin_btn_text_light = 2131099668
+            
+            // aapt resource value: 0x7f060004
+            static member common_plus_signin_btn_text_light_default = 2131099652
+            
+            // aapt resource value: 0x7f060006
+            static member common_plus_signin_btn_text_light_disabled = 2131099654
+            
+            // aapt resource value: 0x7f060007
+            static member common_plus_signin_btn_text_light_focused = 2131099655
+            
+            // aapt resource value: 0x7f060005
+            static member common_plus_signin_btn_text_light_pressed = 2131099653
             (* Member of type 'CodeTypeConstructor' is not supported by the CodeDOM provider and was omitted *)
 
 
@@ -54,7 +141,136 @@ namespace fxBarcodeScanner
         (* partial *)Resource_Drawable () =
             static do Android.Runtime.ResourceIdManager.UpdateIdValues()
             // aapt resource value: 0x7f020000
-            static member Icon = 2130837504
+            static member common_full_open_on_phone = 2130837504
+            
+            // aapt resource value: 0x7f020001
+            static member common_google_signin_btn_icon_dark = 2130837505
+            
+            // aapt resource value: 0x7f020002
+            static member common_google_signin_btn_icon_dark_disabled = 2130837506
+            
+            // aapt resource value: 0x7f020003
+            static member common_google_signin_btn_icon_dark_focused = 2130837507
+            
+            // aapt resource value: 0x7f020004
+            static member common_google_signin_btn_icon_dark_normal = 2130837508
+            
+            // aapt resource value: 0x7f020005
+            static member common_google_signin_btn_icon_dark_pressed = 2130837509
+            
+            // aapt resource value: 0x7f020006
+            static member common_google_signin_btn_icon_light = 2130837510
+            
+            // aapt resource value: 0x7f020007
+            static member common_google_signin_btn_icon_light_disabled = 2130837511
+            
+            // aapt resource value: 0x7f020008
+            static member common_google_signin_btn_icon_light_focused = 2130837512
+            
+            // aapt resource value: 0x7f020009
+            static member common_google_signin_btn_icon_light_normal = 2130837513
+            
+            // aapt resource value: 0x7f02000a
+            static member common_google_signin_btn_icon_light_pressed = 2130837514
+            
+            // aapt resource value: 0x7f02000b
+            static member common_google_signin_btn_text_dark = 2130837515
+            
+            // aapt resource value: 0x7f02000c
+            static member common_google_signin_btn_text_dark_disabled = 2130837516
+            
+            // aapt resource value: 0x7f02000d
+            static member common_google_signin_btn_text_dark_focused = 2130837517
+            
+            // aapt resource value: 0x7f02000e
+            static member common_google_signin_btn_text_dark_normal = 2130837518
+            
+            // aapt resource value: 0x7f02000f
+            static member common_google_signin_btn_text_dark_pressed = 2130837519
+            
+            // aapt resource value: 0x7f020010
+            static member common_google_signin_btn_text_light = 2130837520
+            
+            // aapt resource value: 0x7f020011
+            static member common_google_signin_btn_text_light_disabled = 2130837521
+            
+            // aapt resource value: 0x7f020012
+            static member common_google_signin_btn_text_light_focused = 2130837522
+            
+            // aapt resource value: 0x7f020013
+            static member common_google_signin_btn_text_light_normal = 2130837523
+            
+            // aapt resource value: 0x7f020014
+            static member common_google_signin_btn_text_light_pressed = 2130837524
+            
+            // aapt resource value: 0x7f020015
+            static member common_ic_googleplayservices = 2130837525
+            
+            // aapt resource value: 0x7f020016
+            static member common_plus_signin_btn_icon_dark = 2130837526
+            
+            // aapt resource value: 0x7f020017
+            static member common_plus_signin_btn_icon_dark_disabled = 2130837527
+            
+            // aapt resource value: 0x7f020018
+            static member common_plus_signin_btn_icon_dark_focused = 2130837528
+            
+            // aapt resource value: 0x7f020019
+            static member common_plus_signin_btn_icon_dark_normal = 2130837529
+            
+            // aapt resource value: 0x7f02001a
+            static member common_plus_signin_btn_icon_dark_pressed = 2130837530
+            
+            // aapt resource value: 0x7f02001b
+            static member common_plus_signin_btn_icon_light = 2130837531
+            
+            // aapt resource value: 0x7f02001c
+            static member common_plus_signin_btn_icon_light_disabled = 2130837532
+            
+            // aapt resource value: 0x7f02001d
+            static member common_plus_signin_btn_icon_light_focused = 2130837533
+            
+            // aapt resource value: 0x7f02001e
+            static member common_plus_signin_btn_icon_light_normal = 2130837534
+            
+            // aapt resource value: 0x7f02001f
+            static member common_plus_signin_btn_icon_light_pressed = 2130837535
+            
+            // aapt resource value: 0x7f020020
+            static member common_plus_signin_btn_text_dark = 2130837536
+            
+            // aapt resource value: 0x7f020021
+            static member common_plus_signin_btn_text_dark_disabled = 2130837537
+            
+            // aapt resource value: 0x7f020022
+            static member common_plus_signin_btn_text_dark_focused = 2130837538
+            
+            // aapt resource value: 0x7f020023
+            static member common_plus_signin_btn_text_dark_normal = 2130837539
+            
+            // aapt resource value: 0x7f020024
+            static member common_plus_signin_btn_text_dark_pressed = 2130837540
+            
+            // aapt resource value: 0x7f020025
+            static member common_plus_signin_btn_text_light = 2130837541
+            
+            // aapt resource value: 0x7f020026
+            static member common_plus_signin_btn_text_light_disabled = 2130837542
+            
+            // aapt resource value: 0x7f020027
+            static member common_plus_signin_btn_text_light_focused = 2130837543
+            
+            // aapt resource value: 0x7f020028
+            static member common_plus_signin_btn_text_light_normal = 2130837544
+            
+            // aapt resource value: 0x7f020029
+            static member common_plus_signin_btn_text_light_pressed = 2130837545
+            
+            // aapt resource value: 0x7f02002a
+            static member Icon = 2130837546
+            
+            // aapt resource value: 0x7f02002b
+            static member Puppy = 2130837547
             (* Member of type 'CodeTypeConstructor' is not supported by the CodeDOM provider and was omitted *)
 
 
@@ -63,8 +279,51 @@ namespace fxBarcodeScanner
         
         (* partial *)Resource_Id () =
             static do Android.Runtime.ResourceIdManager.UpdateIdValues()
+            // aapt resource value: 0x7f07000b
+            static member ImageView = 2131165195
+            
+            // aapt resource value: 0x7f070009
+            static member MyButton = 2131165193
+            
+            // aapt resource value: 0x7f07000a
+            static member TextView = 2131165194
+            
+            // aapt resource value: 0x7f070000
+            static member adjust_height = 2131165184
+            
+            // aapt resource value: 0x7f070001
+            static member adjust_width = 2131165185
+            
+            // aapt resource value: 0x7f070006
+            static member auto = 2131165190
+            
+            // aapt resource value: 0x7f070007
+            static member dark = 2131165191
+            
+            // aapt resource value: 0x7f070003
+            static member icon_only = 2131165187
+            
+            // aapt resource value: 0x7f070008
+            static member light = 2131165192
+            
+            // aapt resource value: 0x7f070002
+            static member none = 2131165186
+            
+            // aapt resource value: 0x7f070004
+            static member standard = 2131165188
+            
+            // aapt resource value: 0x7f070005
+            static member wide = 2131165189
+            (* Member of type 'CodeTypeConstructor' is not supported by the CodeDOM provider and was omitted *)
+
+
+    
+    and
+        
+        (* partial *)Resource_Integer () =
+            static do Android.Runtime.ResourceIdManager.UpdateIdValues()
             // aapt resource value: 0x7f050000
-            static member MyButton = 2131034112
+            static member google_play_services_version = 2131034112
             (* Member of type 'CodeTypeConstructor' is not supported by the CodeDOM provider and was omitted *)
 
 
@@ -83,10 +342,134 @@ namespace fxBarcodeScanner
         
         (* partial *)Resource_String () =
             static do Android.Runtime.ResourceIdManager.UpdateIdValues()
+            // aapt resource value: 0x7f040020
+            static member ApplicationName = 2130968608
+            
+            // aapt resource value: 0x7f04001f
+            static member Hello = 2130968607
+            
             // aapt resource value: 0x7f040001
-            static member ApplicationName = 2130968577
+            static member auth_google_play_services_client_facebook_display_name = 2130968577
             
             // aapt resource value: 0x7f040000
-            static member Hello = 2130968576
+            static member auth_google_play_services_client_google_display_name = 2130968576
+            
+            // aapt resource value: 0x7f040018
+            static member common_google_play_services_api_unavailable_text = 2130968600
+            
+            // aapt resource value: 0x7f04000a
+            static member common_google_play_services_enable_button = 2130968586
+            
+            // aapt resource value: 0x7f040009
+            static member common_google_play_services_enable_text = 2130968585
+            
+            // aapt resource value: 0x7f040008
+            static member common_google_play_services_enable_title = 2130968584
+            
+            // aapt resource value: 0x7f040007
+            static member common_google_play_services_install_button = 2130968583
+            
+            // aapt resource value: 0x7f040005
+            static member common_google_play_services_install_text_phone = 2130968581
+            
+            // aapt resource value: 0x7f040006
+            static member common_google_play_services_install_text_tablet = 2130968582
+            
+            // aapt resource value: 0x7f040004
+            static member common_google_play_services_install_title = 2130968580
+            
+            // aapt resource value: 0x7f040013
+            static member common_google_play_services_invalid_account_text = 2130968595
+            
+            // aapt resource value: 0x7f040012
+            static member common_google_play_services_invalid_account_title = 2130968594
+            
+            // aapt resource value: 0x7f040011
+            static member common_google_play_services_network_error_text = 2130968593
+            
+            // aapt resource value: 0x7f040010
+            static member common_google_play_services_network_error_title = 2130968592
+            
+            // aapt resource value: 0x7f040003
+            static member common_google_play_services_notification_ticker = 2130968579
+            
+            // aapt resource value: 0x7f04001c
+            static member common_google_play_services_restricted_profile_text = 2130968604
+            
+            // aapt resource value: 0x7f04001b
+            static member common_google_play_services_restricted_profile_title = 2130968603
+            
+            // aapt resource value: 0x7f04001a
+            static member common_google_play_services_sign_in_failed_text = 2130968602
+            
+            // aapt resource value: 0x7f040019
+            static member common_google_play_services_sign_in_failed_title = 2130968601
+            
+            // aapt resource value: 0x7f040002
+            static member common_google_play_services_unknown_issue = 2130968578
+            
+            // aapt resource value: 0x7f040015
+            static member common_google_play_services_unsupported_text = 2130968597
+            
+            // aapt resource value: 0x7f040014
+            static member common_google_play_services_unsupported_title = 2130968596
+            
+            // aapt resource value: 0x7f040016
+            static member common_google_play_services_update_button = 2130968598
+            
+            // aapt resource value: 0x7f04000c
+            static member common_google_play_services_update_text = 2130968588
+            
+            // aapt resource value: 0x7f04000b
+            static member common_google_play_services_update_title = 2130968587
+            
+            // aapt resource value: 0x7f04000f
+            static member common_google_play_services_updating_text = 2130968591
+            
+            // aapt resource value: 0x7f04000e
+            static member common_google_play_services_updating_title = 2130968590
+            
+            // aapt resource value: 0x7f04000d
+            static member common_google_play_services_wear_update_text = 2130968589
+            
+            // aapt resource value: 0x7f040017
+            static member common_open_on_phone = 2130968599
+            
+            // aapt resource value: 0x7f04001d
+            static member common_signin_button_text = 2130968605
+            
+            // aapt resource value: 0x7f04001e
+            static member common_signin_button_text_long = 2130968606
+            (* Member of type 'CodeTypeConstructor' is not supported by the CodeDOM provider and was omitted *)
+
+
+    
+    and
+        
+        (* partial *)Resource_Styleable () =
+            static do Android.Runtime.ResourceIdManager.UpdateIdValues()
+            [<Microsoft.FSharp.Core.DefaultValueAttribute(false)>]
+            static val mutable private LoadingImageView:int[]
+            
+            // aapt resource value: 2
+            static member LoadingImageView_circleCrop = 2
+            
+            // aapt resource value: 1
+            static member LoadingImageView_imageAspectRatio = 1
+            
+            // aapt resource value: 0
+            static member LoadingImageView_imageAspectRatioAdjust = 0
+            
+            [<Microsoft.FSharp.Core.DefaultValueAttribute(false)>]
+            static val mutable private SignInButton:int[]
+            
+            // aapt resource value: 0
+            static member SignInButton_buttonSize = 0
+            
+            // aapt resource value: 1
+            static member SignInButton_colorScheme = 1
+            
+            // aapt resource value: 2
+            static member SignInButton_scopeUris = 2
             (* Member of type 'CodeTypeConstructor' is not supported by the CodeDOM provider and was omitted *)
 

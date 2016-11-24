@@ -10,4 +10,15 @@
     android:layout_height="wrap_content" 
     android:text="@string/Hello"
     />
+
+  <TextView android:text=""
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:id="@+id/TextView"/>
+  
+<ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ImageView"/>
+  
 </LinearLayout>

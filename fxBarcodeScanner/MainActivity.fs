@@ -8,26 +8,32 @@ open Android.OS
 open Android.Runtime
 open Android.Views
 open Android.Widget
+open Android.Graphics
+open Android.Gms.Vision.Barcodes
 
 [<Activity (Label = "fxBarcodeScanner", MainLauncher = true)>]
 type MainActivity () =
     inherit Activity ()
 
-    let mutable count:int = 1
-
     override this.OnCreate (bundle) =
-
         base.OnCreate (bundle)
-
-        // Set our view from the "main" layout resource
         this.SetContentView (Resource_Layout.Main)
 
-        // Get our button from the layout resource, and attach an event to it
+        let appContext = Application.Context
+        let imageView = this.FindViewById<ImageView>(Resource_Id.ImageView)
+        let textView = this.FindViewById<TextView>(Resource_Id.TextView) 
+
+        BitmapFactory.DecodeResource(appContext.Resources, Resource_Drawable.Puppy)
+        |> imageView.SetImageBitmap
+
+        let detector = (new BarcodeDetector.Builder(appContext))
+                                               .SetBarcodeFormats(BarcodeFormat.QrCode)
+                                               .Build()
+
         let button = this.FindViewById<Button>(Resource_Id.MyButton)
         button.Click.Add (fun args -> 
-            button.Text <- sprintf "%d clicks!" count
-            count <- count + 1
+            if not detector.IsOperational then
+                textView.Text <- "Not operational"
+            else
+                textView.Text <- "Operational"
         )
-
-
-
