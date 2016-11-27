@@ -10,6 +10,7 @@ open Android.Views
 open Android.Widget
 open Android.Graphics
 open Android.Gms.Vision.Barcodes
+open Android.Gms.Vision
 
 [<Activity (Label = "fxBarcodeScanner", MainLauncher = true)>]
 type MainActivity () =
@@ -23,8 +24,8 @@ type MainActivity () =
         let imageView = this.FindViewById<ImageView>(Resource_Id.ImageView)
         let textView = this.FindViewById<TextView>(Resource_Id.TextView) 
 
-        BitmapFactory.DecodeResource(appContext.Resources, Resource_Drawable.Puppy)
-        |> imageView.SetImageBitmap
+        let bitmap = BitmapFactory.DecodeResource(appContext.Resources, Resource_Drawable.Puppy)
+        imageView.SetImageBitmap(bitmap)
 
         let detector = (new BarcodeDetector.Builder(appContext))
                                                .SetBarcodeFormats(BarcodeFormat.QrCode)
@@ -36,4 +37,9 @@ type MainActivity () =
                 textView.Text <- "Not operational"
             else
                 textView.Text <- "Operational"
+
+                let frame = (new Frame.Builder()).SetBitmap(bitmap).Build()
+                let barcode = detector.Detect(frame).ValueAt(0) :?> Barcode 
+
+                textView.Text <- barcode.RawValue
         )
