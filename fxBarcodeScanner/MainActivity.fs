@@ -11,6 +11,15 @@ open Android.Widget
 open Android.Graphics
 open Android.Gms.Vision.Barcodes
 open Android.Gms.Vision
+open ZXing.Mobile
+
+[<Application>]
+type MyApplication(handle: IntPtr, ownerShip: JniHandleOwnership ) = 
+    inherit Application(handle, ownerShip)
+
+    override this.OnCreate() = 
+        base.OnCreate()
+        MobileBarcodeScanner.Initialize (this);
 
 [<Activity (Label = "fxBarcodeScanner", MainLauncher = true)>]
 type MainActivity () =
@@ -33,6 +42,13 @@ type MainActivity () =
         match detected.Size() with
         | 0 -> "Invalid barcode!"
         | _ -> (detector.Detect(frame).ValueAt(0) :?> Barcode).RawValue
+
+    let zxingTest =
+        let scanner = new ZXing.Mobile.MobileBarcodeScanner()
+        async {
+            let! result = scanner.Scan() |> Async.AwaitTask
+            return result.Text
+        } |> Async.RunSynchronously
 
     member this.OperationalAction (dataIntent: Intent) =
         let stream = this.ContentResolver.OpenInputStream(dataIntent.Data)
@@ -67,8 +83,9 @@ type MainActivity () =
             if not detector.IsOperational then
                 _textView |> Option.iter (fun t -> t.Text <- "Not operational")
             else
-                _textView |> Option.iter (fun t -> t.Text <- getBarcodeRawValue detector testBitmap; this.CameraIntent)
-        ))
+                _textView |> Option.iter (fun t -> t.Text <- zxingTest))
+        )
+                //(fun t -> t.Text <- getBarcodeRawValue detector testBitmap; this.CameraIntent)
     
     override this.OnActivityResult (requestCode: int, resultCode: Result, data: Intent) =
         match (requestCode, resultCode) with
